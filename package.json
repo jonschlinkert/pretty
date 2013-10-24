@@ -1,6 +1,6 @@
 {
   "name": "pretty",
-  "description": "The best project ever.",
+  "description": "Sensible presets and some tweaks for beautifying HTML with js-beautify according to my preferences.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/pretty",
   "author": {
@@ -21,17 +21,6 @@
     }
   ],
   "main": "index.js",
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt-readme": "~0.1.0",
-    "grunt-sync-pkg": "~0.1.0"
-  },
   "keywords": [
     "grunt task",
     "build",
@@ -42,5 +31,8 @@
     "blog generator",
     "handlebars",
     "templates"
-  ]
+  ],
+  "dependencies": {
+    "js-beautify": "~1.4.1"
+  }
 }
