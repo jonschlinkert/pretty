@@ -1,7 +1,7 @@
 {
   "name": "pretty",
-  "description": "Sensible presets and some tweaks for beautifying HTML with js-beautify according to my preferences.",
-  "version": "0.1.0",
+  "description": "Some tweaks for beautifying HTML with js-beautify according to my preferences.",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/pretty",
   "author": {
     "name": "Jon Schlinkert",
