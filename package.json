@@ -33,6 +33,6 @@
     "templates"
   ],
   "dependencies": {
-    "js-beautify": "~1.4.1"
+    "js-beautify": "~1.5.4"
   }
 }
