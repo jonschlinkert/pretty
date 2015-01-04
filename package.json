@@ -1,7 +1,7 @@
 {
   "name": "pretty",
   "description": "Some tweaks for beautifying HTML with js-beautify according to my preferences.",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "homepage": "https://github.com/jonschlinkert/pretty",
   "author": {
     "name": "Jon Schlinkert",
@@ -14,25 +14,33 @@
   "bugs": {
     "url": "https://github.com/jonschlinkert/pretty/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jonschlinkert/pretty/blob/master/LICENSE-MIT"
-    }
-  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/pretty/blob/master/LICENSE-MIT"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "main": "index.js",
-  "keywords": [
-    "grunt task",
-    "build",
-    "handlebars helper",
-    "underscore mixin",
-    "site generator",
-    "component generator",
-    "blog generator",
-    "handlebars",
-    "templates"
-  ],
+  "scripts": {
+    "docs": "update && license && npmignore && deps && verb",
+    "all": "npm run docs"
+  },
   "dependencies": {
     "js-beautify": "~1.5.4"
-  }
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": [
+    "beautify",
+    "format",
+    "formatter",
+    "html",
+    "js",
+    "js-beautify",
+    "prettify",
+    "pretty"
+  ]
 }
