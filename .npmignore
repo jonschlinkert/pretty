@@ -1,0 +1,10 @@
+node_modules
+tmp
+temp
+vendor
+*.sublime-*
+
+
+# npmignore
+.*
+test.js
