@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "condense-newlines": "^0.2.1",
-    "extend-shallow": "^3.0.2",
     "js-beautify": "^1.10.3"
   },
   "devDependencies": {
