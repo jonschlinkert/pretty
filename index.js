@@ -7,10 +7,9 @@
 
 'use strict';
 
-var beautify = require('js-beautify');
-var condense = require('condense-newlines');
-var extend = require('extend-shallow');
-var defaults = {
+const beautify = require('js-beautify');
+const condense = require('condense-newlines');
+const defaults = {
   unformatted: ['code', 'pre', 'em', 'strong', 'span'],
   indent_inner_html: true,
   indent_char: ' ',
@@ -18,19 +17,7 @@ var defaults = {
   sep: '\n'
 };
 
-module.exports = function pretty(str, options) {
-  var opts = extend({}, defaults, options);
-  str = beautify.html(str, opts);
-
-  if (opts.ocd === true) {
-    if (opts.newlines) opts.sep = opts.newlines;
-    return ocd(str, opts);
-  }
-
-  return str;
-};
-
-function ocd(str, options) {
+const ocd = (str, options) => {
   // Normalize and condense all newlines
   return condense(str, options)
     // Remove empty whitespace the top of a file.
@@ -42,4 +29,19 @@ function ocd(str, options) {
     .replace(/(\s*<!--)/g, '\n$1')
     // Bring closing comments up to the same line as closing tag.
     .replace(/>(\s*)(?=<!--\s*\/)/g, '> ');
-}
+};
+
+const pretty = (str, options = {}) => {
+  var opts = { ...defaults, ...options };
+  str = beautify.html(str, opts);
+
+  if (opts.ocd) {
+    if (opts.newlines) opts.sep = opts.newlines;
+    return ocd(str, opts);
+  }
+
+  return str;
+};
+
+
+module.exports = pretty
