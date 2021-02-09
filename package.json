@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "condense-newlines": "^0.2.1",
-    "js-beautify": "^1.10.3"
+    "js-beautify": "^1.13.5"
   },
   "devDependencies": {
     "gulp-format-md": "^2.0.0",
