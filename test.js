@@ -25,7 +25,7 @@ describe('pretty', () => {
       '  <body> this is content... </body>',
       '</html>',
     ].join('\n');
-    assert.equal(pretty(fixture, {ocd: true}), expected);
+    assert.equal(pretty(fixture, {extra: true}), expected);
   });
 
   it('should add a newline before comments', () => {
@@ -52,7 +52,7 @@ describe('pretty', () => {
       '  <body> this is content... </body>',
       '</html>',
     ].join('\n');
-    assert.equal(pretty(fixture, {ocd: true}), expected);
+    assert.equal(pretty(fixture, {extra: true}), expected);
   });
 
   it('should move "closing" comments after closing tags', () => {
@@ -79,7 +79,7 @@ describe('pretty', () => {
       '  <div> foo </div> <!-- /end -->',
       '</html>',
     ].join('\n');
-    assert.equal(pretty(fixture, {ocd: true}), expected);
+    assert.equal(pretty(fixture, {extra: true}), expected);
   });
 });
 
