@@ -49,10 +49,10 @@ After
 
 ## Options
 
-### ocd
+### extra
 
 ```js
-pretty(STRING_OF_HTML, {ocd: true});
+pretty(STRING_OF_HTML, {extra: true});
 ```
 
 **Type**: `Boolean`
