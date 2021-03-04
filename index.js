@@ -17,7 +17,7 @@ const defaults = {
   sep: '\n'
 };
 
-const ocd = (str, options) => {
+const extra = (str, options) => {
   // Normalize and condense all newlines
   return condense(str, options)
     // Remove empty whitespace the top of a file.
@@ -35,7 +35,7 @@ const pretty = (str, options = {}) => {
   var opts = { ...defaults, ...options };
   str = beautify.html(str, opts);
 
-  if (opts.ocd) {
+  if (opts.extra) {
     if (opts.newlines) opts.sep = opts.newlines;
     return ocd(str, opts);
   }
