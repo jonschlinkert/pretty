@@ -37,7 +37,7 @@ const pretty = (str, options = {}) => {
 
   if (opts.extra) {
     if (opts.newlines) opts.sep = opts.newlines;
-    return ocd(str, opts);
+    return extra(str, opts);
   }
 
   return str;
